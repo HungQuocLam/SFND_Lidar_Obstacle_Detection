@@ -130,9 +130,9 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
         }
 
         // points to construct the plane
-        pcl::PointXYZ p1 = cloud->points[ind1];
-        pcl::PointXYZ p2 = cloud->points[ind2];
-        pcl::PointXYZ p3 = cloud->points[ind3];
+        PointT p1 = cloud->points[ind1];
+        PointT p2 = cloud->points[ind2];
+        PointT p3 = cloud->points[ind3];
 
         x1 = p1.x;
         x2 = p2.x;
