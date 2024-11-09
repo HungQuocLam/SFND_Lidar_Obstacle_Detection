@@ -102,8 +102,8 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
 
     // clustering
     float ClusterTolerance = 0.5;
-    int MinSize = 15; // 10 for data_2
-    int MaxSize = 400;
+    int MinSize = 10;
+    int MaxSize = 2000;
     // std::vector < pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering(segmentCloud.first, ClusterTolerance, MinSize, MaxSize);
     std::vector < pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.EuclideanClustering(segmentCloud.first, ClusterTolerance, MinSize, MaxSize);
     int clusterId = 1;
@@ -153,7 +153,7 @@ int main (int argc, char** argv)
     std::cout << "starting enviroment" << std::endl;
 
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
-    CameraAngle setAngle = XY;
+    CameraAngle setAngle = FPS;
     initCamera(setAngle, viewer);
     // simpleHighway(viewer);
     // cityBlock(viewer);
