@@ -104,9 +104,11 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
     float ClusterTolerance = 0.5;
     int MinSize = 15; // 10 for data_2
     int MaxSize = 400;
-    std::vector < pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering(segmentCloud.first, ClusterTolerance, MinSize, MaxSize);
+    // std::vector < pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering(segmentCloud.first, ClusterTolerance, MinSize, MaxSize);
+    std::vector < pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.EuclideanClustering(segmentCloud.first, ClusterTolerance, MinSize, MaxSize);
     int clusterId = 1;
-    std::vector<Color> colors = { Color(1,0,0), Color(0,1,0), Color(0,0,1) };
+    //std::vector<Color> colors = { Color(1,0,0), Color(0,1,0), Color(0,0,1) };
+    std::vector<Color> colors = {Color(0, 1, 1), Color(1, 0.85, 0.015), Color(0, 0, 1)};
 
     // render the cluster
     for (pcl::PointCloud<pcl::PointXYZI>::Ptr cluster : cloudClusters)
