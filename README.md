@@ -202,10 +202,7 @@ After the object plane point cloud was processed into a KD-Tree, the point cloud
 This project also introduces kdtree3D.h which is an implementation of KD-Tree in 3D. 
 
 ### Euclidean Clustering
-Euclidean clustering was used to establish indexes to point clusters based on the KD-Tree clusters. The following functions were created to implement Euclidean clustering:
-- `euclidenHelper`: uses the `kdtree->search` function to find the nearest points from a target point based on a distance tolerance
-- `euclideanCluster`: returns a vector of each cluster's list of point indexes based on the results from `euclidenHelper`
-- `ProcessPointClouds::EuclideanClustering`: returns a list of clusters that meet the user defined clustering tolerance
+Euclidean clustering was used to establish indexes to point clusters based on the KD-Tree clusters.
 
 After establishing individual clusters, bounding boxes were added in the point cloud based on the cluster's max width and height (Figure 3). 
 
