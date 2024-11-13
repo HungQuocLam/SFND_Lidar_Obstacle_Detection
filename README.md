@@ -181,9 +181,8 @@ Random Sample Consensus (RANSAC) was implemented to segment the road plane from 
 </br>
 
 RANSAC for a plane was implemented with the following functions in `processPointClouds.cpp`: 
-1. `ProcessPointClouds::Ransac3DHelper`: helper function which iteratively picks three points to form a plane. Returns a set of inliers for the plane of best fit if found
-2. `ProcessPointClouds::SegmentPlaneRansac`: takes a point cloud and calls `Ransac3DHelper` to process the set of inlier points
-3. `ProcessPointClouds::SeperateClouds`: seperates the point cloud from inlier points (road plane) and outlier points (object plane)
+1. `ProcessPointClouds::RansacPlane`: this function iteratively picks three points to form a plane. Returns a set of inliers for the plane of best fit if found
+2. `ProcessPointClouds::SeperateClouds`: seperates the point cloud from inlier points (road plane) and outlier points (object plane)
 
 After segmenting the point cloud (Figure 2), the object plane is used for object detection.
 
@@ -199,6 +198,8 @@ A `struct` type was created for KD-Tree implementation and can be viewed in `src
 - `search`: returns the IDs of all nodes around a target node based on a user defined distance tolerance
 
 After the object plane point cloud was processed into a KD-Tree, the point cloud is ready for clustering.
+
+This project also introduces kdtree3D.h which is an implementation of KD-Tree in 3D. 
 
 ### Euclidean Clustering
 Euclidean clustering was used to establish indexes to point clusters based on the KD-Tree clusters. The following functions were created to implement Euclidean clustering:
