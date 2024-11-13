@@ -213,19 +213,3 @@ After establishing individual clusters, bounding boxes were added in the point c
 <figcaption><b>Figure 3: Bounding boxes on detected objects</b></figcaption>
 
 </br>
-
-### Stream Real Point Cloud Data
-
-After the detection pipeline was finished, the pipeline was appied to a data stream using real point cloud data. The detecton pipeline was able to quickly cluster and detect objects in real time (Figures 4 and 5).
-
-<img src="media/project-1-1.gif" width="700" height="400" />
-<figcaption><b>Figure 4: Object detection from point cloud stream (3/4th view)</b></figcaption>
-
-</br>
-
-</br>
-
-<img src="media/project-1-2.gif" width="700" height="400" />
-<figcaption><b>Figure 5: Object detection from point cloud stream (1st person view)</b></figcaption>
-
-</br>
