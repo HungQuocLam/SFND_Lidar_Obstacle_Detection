@@ -159,7 +159,7 @@ If you get build errors related to Qt5, make sure that the path for Qt5 is corre
 [PCL Mac Compilation Docs](https://pcl.readthedocs.io/projects/tutorials/en/latest/compiling_pcl_macosx.html#compiling-pcl-macosx)
 
 
-# Lidar Obstacle Detection - Project Objective
+## Lidar Obstacle Detection - Project Objective
 This project aims to detect objects from a point cloud stream of traffic on a street. The baseline code which includes LiDAR streaming, preliminary point cloud segmentation, and clustering, was developed in previous lessons leading up to this project. 
 
 ## Detection Pipeline
